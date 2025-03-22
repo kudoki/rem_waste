@@ -101,8 +101,6 @@ const SkipCard = ({
           </div>
           <motion.div
             className="flex flex-col items-end group"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
             whileHover={{ scale: 1.05 }}
             transition={{
               type: "spring",
