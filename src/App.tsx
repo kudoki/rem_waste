@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import "./styles/scrollbar.css";
-import { FilterOptions, Skip } from "./types";
+import { Skip } from "./types";
 import ProgressBar from "./components/ProgressBar";
 import { calculateTotalPrice } from "./utils";
 import SkipCard from "./components/Card";
@@ -29,16 +29,16 @@ function App() {
 
       try {
         // Option 1: Use the API endpoint
-        // const response = await fetch(
-        //   "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft"
-        // );
-        // if (!response.ok) {
-        //   throw new Error("Failed to fetch skips");
-        // }
-        // const skipData = await response.json();
+        const response = await fetch(
+          "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft"
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch skips");
+        }
+        const skipData = await response.json();
 
         // Option 2: Use mock data for development/testing
-        const skipData = [
+        /*   const skipData = [
           {
             id: 11554,
             size: 4,
@@ -183,7 +183,7 @@ function App() {
             allowed_on_road: false,
             allows_heavy_waste: false,
           },
-        ];
+        ]; */
 
         setSkips(skipData);
         setLoading(false);
