@@ -187,16 +187,6 @@ function App() {
 
         setSkips(skipData);
         setLoading(false);
-
-        // Set the first available skip as selected
-        const availableSkips = skipData.filter(
-          (skip: Skip) => skip.allows_heavy_waste
-        );
-        if (availableSkips.length > 0) {
-          setSelectedSkipId(availableSkips[0].id);
-        } else if (skipData.length > 0) {
-          setSelectedSkipId(skipData[0].id);
-        }
       } catch (error) {
         console.error("Error fetching skips:", error);
         setLoading(false);
