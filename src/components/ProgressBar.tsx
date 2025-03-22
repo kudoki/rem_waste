@@ -221,7 +221,7 @@ const ProgressBar = () => {
                   {/* Connecting line between circles */}
                   {!isLast && (
                     <div className="w-12 md:w-16 mx-1 flex items-center">
-                      <div className="h-1 relative w-full">
+                      <div className="h-1 relative w-full  -mt-5">
                         {/* Background line */}
                         <div
                           className="absolute inset-0 rounded-full"
