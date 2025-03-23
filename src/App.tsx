@@ -265,7 +265,7 @@ function App() {
 
           {/* Skip listing */}
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 custom-scrollbar"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 custom-scrollbar pb-12 sm:pb-0"
             initial="hidden"
             animate="visible"
             variants={{
