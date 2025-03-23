@@ -8,6 +8,7 @@ import {
   RecycleIcon,
   InfoIcon,
   QuestionIcon,
+  WarningIcon,
 } from "./Icons";
 const SkipCard = ({
   skip,
@@ -150,44 +151,29 @@ const SkipCard = ({
         <div className="space-y-2 mb-4 text-sm">
           <div className="flex items-center gap-2">
             {skip.allowed_on_road ? (
-              <CheckmarkIcon
-                className={`w-5 h-5 p-1 rounded-full flex items-center justify-center ${
-                  skip.allowed_on_road
-                    ? "bg-green-100 text-green-600"
-                    : "bg-red-100 text-red-600"
-                }`}
-              />
+              <>
+                <CheckmarkIcon
+                  className="w-5 h-5 p-1 rounded-full flex items-center justify-center bg-green-100 text-green-600"
+                />
+                <span className="text-gray-700">Road placement allowed</span>
+              </>
             ) : (
-              <CrossIcon
-                className={`w-5 h-5 p-1 rounded-full flex items-center justify-center ${
-                  skip.allowed_on_road
-                    ? "bg-green-100 text-green-600"
-                    : "bg-red-100 text-red-600"
-                }`}
-              />
+              <>
+                <WarningIcon
+                  className="w-5 h-5 p-1 rounded-full flex items-center justify-center bg-amber-100 text-amber-600"
+                />
+                <span className="text-gray-700">Private property only</span>
+              </>
             )}
-            <span className="text-gray-700">
-              {skip.allowed_on_road
-                ? "Road placement allowed"
-                : "No road placement"}
-            </span>
           </div>
           <div className="flex items-center gap-2">
             {skip.allows_heavy_waste ? (
               <CheckmarkIcon
-                className={`w-5 h-5 p-1 rounded-full flex items-center justify-center ${
-                  skip.allows_heavy_waste
-                    ? "bg-green-100 text-green-600"
-                    : "bg-red-100 text-red-600"
-                }`}
+                className="w-5 h-5 p-1 rounded-full flex items-center justify-center bg-green-100 text-green-600"
               />
             ) : (
               <CrossIcon
-                className={`w-5 h-5 p-1 rounded-full flex items-center justify-center ${
-                  skip.allows_heavy_waste
-                    ? "bg-green-100 text-green-600"
-                    : "bg-red-100 text-red-600"
-                }`}
+                className="w-5 h-5 p-1 rounded-full flex items-center justify-center bg-red-100 text-red-600"
               />
             )}
             <span className="text-gray-700">

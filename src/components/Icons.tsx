@@ -86,3 +86,10 @@ export const FilterIcon = ({ className }: { className: string }) => {
   </svg>
   );
 };
+export const WarningIcon = ({ className }: { className: string }) => {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12,2L2,22h20L12,2ZM11,16V18H13V16H11ZM11,12V14H13V12H11ZM11,8V10H13V8H11Z" />
+    </svg>
+  );
+};

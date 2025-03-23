@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Skip } from "../types";
 import { calculateTotalPrice } from "../utils";
-import { CrossIcon, RecycleIcon } from "./Icons";
+import { CrossIcon, RecycleIcon, WarningIcon } from "./Icons";
 interface SkipDetailsModalProps {
   skip: Skip | null;
   isOpen: boolean;
@@ -82,7 +82,7 @@ const SkipDetailsModal = ({ skip, isOpen, onClose, onConfirm }: SkipDetailsModal
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-800 mb-3">Features</h4>
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="flex items-center gap-2">
+                    {skip.allowed_on_road ?<div className="flex items-center gap-2">
                       <span className={`w-5 h-5 rounded-full flex items-center justify-center ${
                         skip.allowed_on_road
                           ? "bg-green-100 text-green-600"
@@ -94,6 +94,14 @@ const SkipDetailsModal = ({ skip, isOpen, onClose, onConfirm }: SkipDetailsModal
                         Road placement
                       </span>
                     </div>
+                    :
+                    <div className="flex items-center gap-2">
+                      <WarningIcon className="w-5 h-5 text-amber-600 bg-amber-100 rounded-full mr-2 p-1" />
+                      <span className="text-gray-700">
+                        Private property
+                      </span>
+                    </div>
+                    }
                     <div className="flex items-center gap-2">
                       <span className={`w-5 h-5 rounded-full flex items-center justify-center ${
                         skip.allows_heavy_waste

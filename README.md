@@ -9,7 +9,7 @@ The previous design, which utilized black and blue colors, did not align well wi
 I redesigned the progress bar to include circles, which provide a clearer visual representation of the steps involved. This design choice enhances user experience by making the progress more intuitive. Additionally, I implemented a fade effect and centered the selected step on mobile devices to improve responsiveness and usability.
 
 ### Phase 3: Enhancing Skip Listings
-I added a label to display the available skips and introduced more filters to help users find the right skip more easily. On desktop, these filters are presented as a dropdown, while on mobile, they appear in fullscreen mode to ensure a responsive design.
+I added a label to display the available skips and introduced more filters to help users find the right skip more easily. On desktop, these filters are presented as a dropdown, while on mobile, they appear in fullscreen mode to ensure a responsive design. In addition to filters, users can sort the skips, apply a price filter, switch between private and road placement, and show only skips that allow heavy waste.
 
 ### Phase 4: Modernizing the Grid and Cards
 The grid and cards are now responsive and feature a modern style. Instead of a single button, each card includes two buttons: "Select" and "Details". This gives users more options and prevents them from feeling constrained. The cards also display VAT information, and hovering over the price/VAT shows a breakdown of how the total is calculated, including any additional charges.
